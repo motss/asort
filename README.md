@@ -1,5 +1,7 @@
 # asort
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/motss/asort.svg)](https://greenkeeper.io/)
+
 > Yet another NPM package to output greetings.
 
 Just another NPM package that does simply amazing thing.
