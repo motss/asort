@@ -51,7 +51,7 @@ test('show help screen when running with no parameters', async (t) => {
     t.regex(
       await execa.stdout('./dist/cli.js'),
       /asort/i
-    )
+    );
   } catch (e) {
     t.fail();
   }
@@ -62,7 +62,7 @@ test('show help screen', async (t) => {
     t.regex(
       await execa.stdout('./dist/cli.js', ['--help']),
       /asort/i
-    )
+    );
   } catch (e) {
     t.fail();
   }

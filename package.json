@@ -1,39 +1,40 @@
 {
   "name": "asort",
   "version": "0.0.0",
+  "private": true,
   "description": "Renaming files in ascending order",
   "keywords": [
     "asort",
+    "files",
     "npm",
-    "zumata"
+    "rename",
+    "rename-files",
+    "sort"
   ],
   "homepage": "https://github.com/motss/asort",
   "license": "MIT",
-  "author": "The Zumata Team <gary.theis@zumata.com>",
+  "author": "Rong Sen Ng <wes.ngrongsen@gmail.com>",
   "main": "dist/index.js",
+  "bin": "dist/cli.js",
   "repository": {
     "type": "git",
     "url": "git@github.com:motss/asort.git"
   },
   "scripts": {
+    "build": "cross-env NODE_ENV=production gulp build",
+    "build:prod": "cross-env NODE_ENV=production npm run build",
     "check": "npm run lint && npm run nsp",
+    "gulp": "gulp",
     "lint": "eslint ./src",
     "nsp": "nsp check",
-    "gulp": "gulp",
-    "build": "cross-env NODE_ENV=production gulp",
-    "serve": "node -r @std/esm dist/demo/",
-    "debug": "node --inspect -r @std/esm dist/demo/",
-    "debug:prod": "cross-env NODE_ENV=production npm run debug",
-    "build:prod": "cross-env NODE_ENV=production npm run build",
     "test": "ava"
   },
-  "bin": "dist/cli.js",
   "dependencies": {
-    "@std/esm": "^0.11.3",
     "chalk": "^2.1.0",
     "meow": "^3.7.0"
   },
   "devDependencies": {
+    "@std/esm": "^0.11.3",
     "@types/chalk": "^0.4.31",
     "@types/node": "^8.0.34",
     "ava": "^0.22.0",
@@ -59,7 +60,6 @@
     "node": ">= 8.6.0",
     "npm": ">= 5.3.0"
   },
-  "private": true,
   "@std/esm": {
     "esm": "all",
     "cjs": true,
